@@ -32,6 +32,8 @@ myvector = [5, 2, 4]
 
 mymatrix = [[0, 1, 2] [3, 4, 5] [6, 7, 8]]
 
+# There is also tuples, dictionaries etc.
+
 # Indexing is 1-based:
 
 myvector[1]
@@ -80,3 +82,28 @@ end
 dosomecoolstuff()
 dosomecoolstuff(false)
 
+# In the above function, the argument `really` is declared as type `Bool` (using `::`).
+# To know the types of variables/values, use
+
+typeof(myvariable)
+
+typeof(5/7)
+
+typeof(mystring)
+
+typeof(myvector)
+
+# You can create custom types using the `struct` keyword:
+
+struct mytype
+    firstentry::String
+    secondentry::Int64
+end
+
+# ... and create instances with:
+
+firsttype = mytype("foo", 7)
+
+# call field values:
+
+firsttype.firstentry
