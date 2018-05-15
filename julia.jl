@@ -4,6 +4,8 @@
 #
 # Ludwig Leidinger <ludwig.leidinger@uni-wuerzburg.de>
 #
+# julia documentation can be found at https://docs.julialang.org/en/stable
+#
 # julia is a general purpose, dynamic programming language.
 # It aims to combine the usability of R/matlab/python with the speed of C.
 # As a fairly new language, it is still under development.
@@ -107,3 +109,36 @@ firsttype = mytype("foo", 7)
 # call field values:
 
 firsttype.firstentry
+
+# Some more advanced notes on this:
+# There are two kinds of structs: `immutable struct` and `mutable struct`
+# Just using `struct` results in an immutable struct.
+# Immutable types can not have their values modified (they can be reassigned though).
+# With mutable types, this is possible but be aware that mutables are copied by reference (pointer)!
+# Base types are also divided in these categories.
+# Strings are immutable:
+
+mystring[end] = '?'
+
+# Arrays are mutable:
+
+mycopiedvector = myvector
+
+myvector[1] = 27
+
+mycopiedvector
+
+# Functions can have different methods, depending on their arguments.
+# This is called "multiple dispatch" and is an important concept in julia.
+
+function dosomecoolstuff(intargument::Int64)
+    for i in 1:intargument
+        print("bla")
+    end
+    println("")
+end
+
+dosomecoolstuff(true)
+
+dosomecoolstuff(8)
+
