@@ -49,7 +49,7 @@ sqrt(myvariable)
 mean(myvector)
 
 # Some functions modify their arguments.
-# By convention, they are indicated by a `!` (which you should sick to, too).
+# By convention, they are indicated by a `!` (which you should stick to, too).
 
 sort!(myvector)
 
