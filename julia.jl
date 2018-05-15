@@ -28,7 +28,7 @@ mystring = "Hello YoMos!"
 
 # Multidimensional structures are called arrays.
 
-myvector = [2, 4, 5]
+myvector = [5, 2, 4]
 
 mymatrix = [[0, 1, 2] [3, 4, 5] [6, 7, 8]]
 
@@ -48,8 +48,35 @@ sqrt(myvariable)
 
 mean(myvector)
 
+# Some functions modify their arguments.
+# By convention, they are indicated by a `!` (which you should sick to, too).
+
+sort!(myvector)
+
 # Element-wise application of functions and operaters are indicated by a `.`:
 
 sqrt.(myvector)
 myvector .^ 5
+
+# Or use a loop:
+
+for i in myvector
+    println(sqrt(i))
+end
+
+# Code blocks (functions, loops, conditionals, etc.) are closed with `end` keywords.
+
+# You should try to always write functions.
+# They compile into the most efficient binaries.
+
+function dosomecoolstuff(really::Bool = true)
+    if really
+        return "OK."
+    else
+        return "nope."
+    end
+end
+
+dosomecoolstuff()
+dosomecoolstuff(false)
 
