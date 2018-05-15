@@ -18,15 +18,15 @@
 
 2^8
 
-5/7
+5 / 7
 
 # Of course, you can assign the values to variables:
 
 myvariable = π * 7
 
-mystring = "Hello YoMos!"
-
 # That's right - julia is Unicode-compatible.
+
+mystring = "Hello YoMos!"
 
 # Multidimensional structures are called arrays.
 
