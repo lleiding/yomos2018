@@ -97,14 +97,14 @@ typeof(myvector)
 
 # You can create custom types using the `struct` keyword:
 
-struct mytype
+struct Mytype
     firstentry::String
     secondentry::Int64
 end
 
 # ... and create instances with:
 
-firsttype = mytype("foo", 7)
+firsttype = Mytype("foo", 7)
 
 # call field values:
 
