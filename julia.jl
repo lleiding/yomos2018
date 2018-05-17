@@ -142,3 +142,10 @@ dosomecoolstuff(true)
 
 dosomecoolstuff(8)
 
+# To install packages:
+
+Pkg.add("Distributions")
+
+# and load with
+
+using Distributions
